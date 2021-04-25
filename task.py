@@ -4,13 +4,13 @@ def crypt(dir):
     import pyAesCrypt
     question = input('Шифровать или расшифровать файл? -- ')
     if question == 'Шифровать':
-        dir = input('Введите название файла для шифрования: ')
+        dir = 'C:\\Users\\38096\\studying\\1.txt'
         password = input('Введите ключ: ')
         bufferSize = 512 * 1024
         pyAesCrypt.encryptFile(str(dir), str(dir) + '.aes', password, bufferSize)
         print('Шифрование завершено ' + str(dir) + '.aes')
     else:
-        file = input('Введите название файла для расшифровки: ')
+        file = 'C:\\Users\\38096\\studying\\1.txt.aes'
         password = input('Введите ключ: ')
         bufferSize = 512 * 1024
         pyAesCrypt.decryptFile(str(file), str(os.path.splitext(file)[0]), password, bufferSize)
